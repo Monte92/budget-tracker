@@ -2,6 +2,7 @@ import { useState } from "react";
 import TransactionForm from "./components/TransactionForm.jsx";
 import TransactionList from "./components/TransactionList.jsx";
 import Balance from "./components/Balance.jsx"; 
+//import "./app.css"
 
 const App = () => {
     const [transactions, setTransactions] = useState([]);
@@ -23,7 +24,7 @@ const App = () => {
 
     let startingBalance = parseFloat(200);
     return (
-        <div className="app-container">
+        <div className="container">
             <h1>Expense Tracker</h1>
             <Balance startingBalance={startingBalance} transactions={transactions} /> 
             <TransactionForm onAddTransaction={addTransaction} />
